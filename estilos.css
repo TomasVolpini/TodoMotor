@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;900&display=swap');
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;;
+}
+
+div.barraSuperior{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 64px;
+    align-items: center;
+}
+
+.imgLogo{
+    height: 50px;
+    width: auto;
+    
+}
+
+nav ul li{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 900;
+    padding-right: 30px;
+}
+
+.navegacionTransparente a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+.navegacionTransparente a:hover{
+    color:blueviolet
+}
+
+header.homepage{
+    height: 100vh;
+    width: 100%;
+    background-image: url(Img/Auto\ amariilo.png);
+    background-size: 170% auto;
+    background-position: right 80% bottom 50%;
+    background-repeat: no-repeat;
+
+}
+
+.call{
+    width: 45%;
+    height: auto;
+    margin-left: 64px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.call h1{
+    font-size: 80px;
+    font-weight: bolder;
+    padding-bottom: 16px;
+}
+
+.call p{
+    width: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 24px;
+
+}
+
+.call a{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: blueviolet;
+    box-shadow: 3px 3px 5px 1px black;
+    text-decoration: none;
+    padding:16px 24px;
+    border-radius: 100px;
+}
+
+.call a:hover{
+    background-color: rgb(70, 22, 116);
+}
+
+.quienesSomos{
+    background-color: white;
+    padding: 64px;
+}
+
+section.quienesSomos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+div.imgFachada{
+    width: 600px;
+    height: 390px;
+    background-image: url(Img/Fachada\ negocio.png);
+    background-size: cover;
+    /* background-color: blue; */
+    display: inline-block;
+    background-repeat: no-repeat;
+    border-radius: 36px;
+}
+
+.logoGif{
+    /* background-color: blue; */
+    width: auto;
+    height: auto;
+}
+
+aside.logo-QuienesSomos{
+    /* background-color: red; */
+    font-size: 28px;
+    font-weight: bold;
+    text-align: justify;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+footer{
+    height: 300px;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px 64px;
+    align-items: flex-end;
+    font-size: 28px;
+    color: white;
+
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 15px;
+}
+
+footer p{
+    display: inline-block;
+    /* background-color: blueviolet; */
+}
+
+
+#resenas{
+    background-color: yellow;
+    padding: 150px;
+}
+#repuestos{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 150px;
+}
+#compraOnline{
+    background-color: yellow;
+    padding: 150px;
+}
+#contactanos{
+    background-color: rgb(14, 14, 14);
+    color: white;
+    padding: 150px;
+}
