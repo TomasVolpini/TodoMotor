@@ -4,39 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Motor Quilmes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <div class="barraSuperior">
-            <div class="logo"><img class="imgLogo" src="../Logo/Todo Motor logo.svg" alt="Todo Motor logo"></div>
+        <!-- ⁡⁢⁣⁣OPEN⁡ NAVBAR LG -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="imgLogo" src="../logo/Todo Motor logo.svg" alt="Logo TodoMotor"></a>
+        
+                <!-- Lado derecho barra -->
+            
+                <!-- Boton -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <nav class="navegacionTransparente">
-                <ul>
-                    <li><a href="../index.html">Quiénes somos</a></li>
-                    <li><a href="./resenas.html">Reseñas</a></li>
-                    <li><a href="./repuestos.html">Repuestos</a></li>
-                    <li><a href="./compraOnline.html">Comprá online</a></li>
-                    <li><a href="./contactanos.html">Contactanos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div id="resenas">
-        <p>Aquí irán las reseñas</p>
-    </div>
-    <footer>
-            <p>©Todo Motor Quilmes, 2024</p>
-            <div class="redes">
-                <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                <!-- Contenido barra desplegable -->
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/resenas.html">Reseñas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/repuestos.html">Repuestos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/compraOnline.html">Comprá online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contactanos.html">Contactanos</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
             </div>
-    </footer>
+        </nav>
+        <!-- ⁡⁢⁣⁣CIERRE⁡ NAVBAR LG -->
+
+    </header>
+    
+    <div class="container-fluid resenas">
+        <div class="row">
+            <div class="col-12">
+                <!-- <marquee behavior="" direction=""> -->
+                    <div class="cardResenas cardResenas--s">
+                        <div class="posicion">
+                            <div class="estrellas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="texto"><p>Muy buena atención,  saben de venta de repuestos. No te matan con el interés si decidís pagar con tarjeta de crédito. Lugar  recomendable</p></div>
+                        </div>
+                    </div>
+
+                    <div class="cardResenas cardResenas--s">
+                        <div class="posicion">
+                            <div class="estrellas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="texto"><p>Excelente, muy buena atención y precios. Llevé a rectificar el motor y tapa de mi auto y me avisaron por WhatsApp cuando estaba todo listo.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="cardResenas cardResenas--l">
+                        <div class="posicion">
+                            <div class="estrellas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="texto"><p>Excelente casa de repuestos. Muy buenos precios, he comprado y abonado incluso más barato que las tiendas y app online. La atención es muy satisfactoria, me refiero a lo que uno busca que a veces no lo pedimos por su nombre técnico. Eso para mí es un detalle de mucho valor. <br><br>
+                            También si tenés dudas te asesoran con el repuesto, y si no lo tienen te dicen dónde conseguirlo, que es muy raro que no tengan algo, a no ser que busquemos fuera de su línea de trabajo. En fin, la casa de repuestos nivel dios.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="cardResenas cardResenas--s">
+                        <div class="posicion">
+                            <div class="estrellas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="texto"><p>Muy buena atención. Precios muy inferiores con respecto a la competencia.</p></div>
+                        </div>
+                    </div>
+
+                <!-- </marquee> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 footer">
+                <p>©Todo Motor Quilmes, 2024</p>
+                <div class="redes pb-2">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

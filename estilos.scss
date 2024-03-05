@@ -34,7 +34,7 @@ html {
 .offcanvas-body{
     font-size: 1.5rem;
     font-weight: 900;
-    width: fill;
+    //width: fill;
 
     li{
         padding-right: 2%;
@@ -216,27 +216,6 @@ html {
 
 
 
-.footerrr{
-    //height 30vh para footer con altura
-    height: 10vh;
-    width: 100%;
-    background-color: rgb(49, 49, 49);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 1rem;
-    color: $colorBlanco;
-
-}
-.footerrr a{
-    color: $colorBlanco;
-    text-decoration: none;
-    letter-spacing: 15px;
-    font-size: 1.5rem;
-   // background-color: red;
-}
-
 
 //MEDIDAS FULL SCREEN
 // .footer{
@@ -265,21 +244,110 @@ html {
 
 
 
-#resenas{
-    background-color: yellow;
-    padding: 150px;
-}
+
+
+
 #repuestos{
     background-color: rgb(48, 48, 48);
     color: white;
     padding: 150px;
 }
 #compraOnline{
-    background-color: yellow;
+    background-color: rgb(0, 47, 255);
     padding: 150px;
 }
 #contactanos{
     background-color: rgb(14, 14, 14);
     color: white;
     padding: 150px;
+}
+
+
+//​‌‌‌⁡⁣⁣⁢RESEÑAS⁡​
+
+
+div.resenas{
+    height: auto;
+    background-color: $colorAmarillo;
+    //width: 100%;
+    padding-top: 20px;
+    
+
+    .cardResenas{
+        transform: scale(0.7);
+        display: inline-block;
+        height: 347px;
+        background-color: white;
+        //width: 384px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        padding: 0 2.3rem 0;
+        box-shadow: 4px 4px 10px 0px transparentize($color: $colorVioleta, $amount: 0.5);
+
+        .posicion{
+            position: relative;
+            top: 2.3rem;
+            
+
+            div.estrellas{
+               // background-color: pink;
+                color: $colorAmarillo;
+                font-size: 1.8rem;
+                word-spacing: 0.5rem;
+                margin-bottom: 1rem;
+            }
+    
+            div.texto{
+                //width: 300px;
+                //background-color: pink;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: justify;
+                line-height: 1.5rem;
+            }
+        }
+
+
+    
+    }
+
+    .cardResenas--s{
+        width: 384px;
+
+    }
+
+    .cardResenas--l{
+        width: 816px;
+        display: none;
+
+    }
+
+}
+
+
+
+
+.footer{
+    //height 30vh para footer con altura
+    height: 10vh;
+    //width: 100%;
+    background-color: rgb(49, 49, 49);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1rem;
+    color: $colorBlanco;
+
+}
+.footer a{
+    color: $colorBlanco;
+    text-decoration: none;
+    letter-spacing: 15px;
+    font-size: 1.5rem;
+   // background-color: red;
 }
