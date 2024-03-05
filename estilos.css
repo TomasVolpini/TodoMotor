@@ -1,177 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Condensed', sans-serif; */
-
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Condensed', sans-serif;;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-div.barraSuperior{
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 64px;
-    align-items: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.imgLogo{
-    height: 50px;
+.btn-close {
+  opacity: 100%;
+}
+
+.text-bg-dark {
+  background-color: yellow !important;
+}
+
+header.homepage {
+  height: 100vh;
+  width: 100%;
+  background-image: url(Img/Auto\ amariilo.png);
+  background-size: 170% auto;
+  background-position: right 80% bottom 50%;
+  background-repeat: no-repeat;
+  background-color: gray;
+}
+
+.imgLogo {
+  height: 50px;
+  width: auto;
+  padding-left: 2rem;
+}
+
+.offcanvas-body {
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+}
+.offcanvas-body li {
+  padding-right: 2%;
+}
+.offcanvas-body a {
+  color: black !important;
+}
+.offcanvas-body a:hover {
+  color: blueviolet !important;
+}
+
+@media only screen and (max-width: 1099px) {
+  header.homepage {
+    background-size: 700%;
+    background-position: right 58% bottom 50%;
+  }
+  .imgLogo {
+    height: 30px;
     width: auto;
-    
-}
-
-nav ul li{
-    display: inline-block;
-    font-size: 30px;
-    font-weight: 900;
-    padding-right: 30px;
-}
-
-.navegacionTransparente a{
-    color: black;
-    text-decoration: none;
-    
-}
-
-.navegacionTransparente a:hover{
-    color:blueviolet
-}
-
-header.homepage{
-    height: 100vh;
+  }
+  .call {
     width: 100%;
-    background-image: url(Img/Auto\ amariilo.png);
-    background-size: 170% auto;
-    background-position: right 80% bottom 50%;
-    background-repeat: no-repeat;
-
-}
-
-.call{
-    width: 45%;
     height: auto;
-    margin-left: 64px;
+    padding: 2rem;
     border: none;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.call h1{
-    font-size: 80px;
-    font-weight: bolder;
-    padding-bottom: 16px;
-}
-
-.call p{
-    width: 50%;
-    font-size: 30px;
-    font-weight: bold;
+    align-items: center;
+  }
+  .call h1 {
+    font-size: 11vw;
+    font-weight: 900;
+  }
+  .call p {
+    width: 70vw;
+    font-size: 4vw;
+    text-align: center;
+    font-weight: 900;
     padding-bottom: 24px;
-
-}
-
-.call a{
+  }
+  .call a {
     color: white;
     font-weight: bold;
     font-size: 25px;
     background-color: blueviolet;
     box-shadow: 3px 3px 5px 1px black;
     text-decoration: none;
-    padding:16px 24px;
+    padding: 1rem 2rem;
     border-radius: 100px;
-}
-
-.call a:hover{
+    transform: scale(0.7);
+  }
+  .call a:hover {
     background-color: rgb(70, 22, 116);
-}
-
-.quienesSomos{
-    background-color: white;
-    padding: 64px;
-}
-
-section.quienesSomos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-div.imgFachada{
-    width: 600px;
-    height: 390px;
-    background-image: url(Img/Fachada\ negocio.png);
-    background-size: cover;
-    /* background-color: blue; */
-    display: inline-block;
-    background-repeat: no-repeat;
-    border-radius: 36px;
-}
-
-.logoGif{
-    /* background-color: blue; */
-    width: auto;
-    height: auto;
-}
-
-aside.logo-QuienesSomos{
-    /* background-color: red; */
-    font-size: 28px;
-    font-weight: bold;
-    text-align: justify;
-    width: 600px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: center;
-
-}
-
-footer{
-    height: 300px;
-    width: 100%;
-    background-color: rgb(49, 49, 49);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 32px 64px;
-    align-items: flex-end;
-    font-size: 28px;
-    color: white;
-
-}
-footer a{
-    color: white;
-    text-decoration: none;
-    letter-spacing: 15px;
-}
-
-footer p{
-    display: inline-block;
-    /* background-color: blueviolet; */
-}
-
-
-#resenas{
+  }
+  .call a:active {
     background-color: yellow;
-    padding: 150px;
-}
-#repuestos{
-    background-color: rgb(48, 48, 48);
+  }
+  header i {
+    position: fixed;
+    left: 50vw;
+    bottom: 3vh;
     color: white;
-    padding: 150px;
+  }
 }
-#compraOnline{
-    background-color: yellow;
-    padding: 150px;
+.quienesSomos {
+  background-color: white;
+  padding: 64px;
 }
-#contactanos{
-    background-color: rgb(14, 14, 14);
-    color: white;
-    padding: 150px;
+
+section.quienesSomos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+
+div.imgFachada {
+  width: 600px;
+  height: 390px;
+  background-image: url(Img/Fachada\ negocio.png);
+  background-size: cover;
+  /* background-color: blue; */
+  display: inline-block;
+  background-repeat: no-repeat;
+  border-radius: 36px;
+}
+
+.logoGif {
+  /* background-color: blue; */
+  width: auto;
+  height: auto;
+}
+
+aside.logo-QuienesSomos {
+  /* background-color: red; */
+  font-size: 28px;
+  font-weight: bold;
+  text-align: justify;
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  background-color: rgb(49, 49, 49);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 32px 64px;
+  align-items: flex-end;
+  font-size: 28px;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 15px;
+}
+
+footer p {
+  display: inline-block;
+  /* background-color: blueviolet; */
+}
+
+#resenas {
+  background-color: yellow;
+  padding: 150px;
+}
+
+#repuestos {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  padding: 150px;
+}
+
+#compraOnline {
+  background-color: yellow;
+  padding: 150px;
+}
+
+#contactanos {
+  background-color: rgb(14, 14, 14);
+  color: white;
+  padding: 150px;
+}/*# sourceMappingURL=estilos.css.map */
