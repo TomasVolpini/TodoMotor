@@ -111,12 +111,13 @@ html {
 
 // ⁡⁢⁣⁣START⁡ HERO SECTION
     header.homepage{
-        height: 100vh;
+        height: 100svh;
         width: 100%;
         background-image: url(./img/Auto\ amariilo.png);
         background-repeat: no-repeat;
         background-size: 700%;
         background-position: right 58% bottom 50%;
+        position:relative
     }
 
     .imgLogo{
@@ -175,10 +176,12 @@ html {
     }
 
     header i{
-        position: relative;
-        left: 50vw;
-        top: 500px;
+        position: absolute;
+        left: 50%;
+        top: 95%;
         color: white;
+        //background-color: white;
+        transform: translate(-50%, -50%);
         }   
 // ⁡⁢⁣⁣FIN⁡ HERO SECTION
 
