@@ -40,6 +40,11 @@ html {
         padding-right: 2%;
     }
 
+    li:last-child{
+        padding-right: 0px;
+        //background-color: red;
+    }
+
     a{
         color: $colorNegro !important;
     }
@@ -50,139 +55,111 @@ html {
 }
 
 
-// //FULL SCREEN
-// header.homepage{
-//     height: 100vh;
-//     width: 100%;
-//     background-image: url(Img/Auto\ amariilo.png);
-//     background-size: 170% auto;
-//     background-position: right 80% bottom 50%;
-//     background-repeat: no-repeat;
-//     background-color: gray;
-//     //overflow: hidden;
-// }
 
-// .imgLogo{
-//     height: 50px;
-//     width: auto;
-//     padding-left: $margins;
-    
-// }
+//Previamente full estaba aca
 
-// .call{
-//     width: 45%;
-//     height: auto;
-//     margin-left: 64px;
-//     border: none;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-// }
 
-// .call h1{
-//     font-size: 80px;
-//     font-weight: bolder;
-//     padding-bottom: 16px;
-// }
-
-// .call p{
-//     width: 50%;
-//     font-size: 30px;
-//     font-weight: bold;
-//     padding-bottom: 24px;
-
-// }
-
-// .call a{
-//     color: white;
-//     font-weight: bold;
-//     font-size: 25px;
-//     background-color: blueviolet;
-//     box-shadow: 3px 3px 5px 1px black;
-//     text-decoration: none;
-//     padding:16px 24px;
-//     border-radius: 100px;
-// }
-
-// .call a:hover{
-//     background-color: rgb(70, 22, 116);
-// }⁡
 
 
 // ⁡⁢⁣⁣START⁡ HERO SECTION
-    header.homepage{
-        height: 100svh;
-        width: 100%;
-        background-image: url(./img/Auto\ amariilo.png);
-        background-repeat: no-repeat;
-        background-size: 700%;
-        background-position: right 58% bottom 50%;
-        position:relative
-    }
 
-    .imgLogo{
-        height: 30px;
-        width: auto;
-        
-    }
+.navbar{
+    padding: 8px calc(1/2)*$margins !important; //por defecto agrega 8 top-bottom padding, no afecta borde derecho
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: space-evenly !important;
+    //background-color: pink;
 
-    .call{
-        width: 100%;
-        height: auto;
-        padding: 2rem;
-        border: none;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       // background-color: red;
-    }
-    
-    .call h1{
-        font-size: 11vw;
-        font-weight: 900;
-        //padding-bottom: 1rem;
-    }
-    
-    .call p{
-        width: 70vw;
-        font-size: 4vw;
-        text-align: center;
-       // padding-left: 2rem;
-        //padding-right: 2rem;
-        font-weight: 900;
-        padding-bottom: 24px;
-    
-    }
-    
-    .call a{
-        color: $colorBlanco;
-        font-weight: bold;
-        font-size: 25px;
-        background-color: $colorVioleta;
-        box-shadow: 3px 3px 5px 1px $colorNegro;
-        text-decoration: none;
-        padding:1rem 2rem;
-        border-radius: 100px;
-        transform: scale(0.7);
-    }
-    
-    .call a:hover{
-        background-color: $colorVioletaHover;
-    }
+    div{
+        //background-color: blue;
+        padding: 0 !important;
+        margin: 0 !important;
 
-    .call a:active{
-        background-color: $colorAmarillo;
-    }
+        div div ul{
+            padding: 0 !important;
 
-    header i{
-        position: absolute;
-        left: 50%;
-        top: 95%;
-        color: white;
-        //background-color: white;
-        transform: translate(-50%, -50%);
-        }   
+            li{
+                text-align: center;
+            }
+        }
+    }
+}
+
+header.homepage{
+    height: 100svh;
+    width: 100%;
+    background-image: url(./img/Auto\ amariilo.png);
+    background-repeat: no-repeat;
+    background-size: 700%;
+    background-position: right 58% bottom 50%;
+    position:relative
+}
+
+.imgLogo{
+    height: 30px;
+    width: auto;
+    
+}
+
+.call{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    border: none;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: red;
+}
+
+.call h1{
+    font-size: 11vw;
+    font-weight: 700;
+    //padding-bottom: 1rem;
+}
+
+.call h2{
+    width: 70vw;
+    font-size: 4vw;
+    text-align: center;
+    // padding-left: 2rem;
+    //padding-right: 2rem;
+    font-weight: 700;
+    padding-bottom: 24px;
+
+}
+
+.call a{
+    color: $colorBlanco;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: $colorVioleta;
+    box-shadow: 3px 3px 5px 1px $colorNegro;
+    text-decoration: none;
+    padding:0.8rem 2rem;
+    border-radius: 100px;
+    transform: scale(0.7);
+}
+
+.call a:hover{
+    background-color: $colorVioletaHover;
+}
+
+.call a:active{
+    background-color: $colorAmarillo;
+}
+
+header i{
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    color: white;
+    //background-color: white;
+    transform: translate(-50%, -50%);
+    }  
+    
+
 // ⁡⁢⁣⁣FIN⁡ HERO SECTION
 
 .navbarSticky{
@@ -195,7 +172,8 @@ html {
 
 // ⁡⁢⁣⁣START⁡ QUIENES SOMOS
 .imgFachada{
-    border-radius: 30px !important;
+    border-radius: 4vw !important;
+    width: 100%;
     //background-color: pink;
 }
 
@@ -209,16 +187,180 @@ html {
 
 .quienesSomos p{
     //background-color: red;
-    font-size: 1rem;
+    max-width: 500px;
+    font-size: 4vw;
     font-weight: bolder;
     text-align: justify;
-    line-height: 1rem;
+    line-height: 4vw;
 }
 //28px para full screen
 // ⁡⁢⁣⁣FIN⁡ QUIENES SOMOS
 
 
+.footer{
+    //height 30vh para footer con altura
+    height: 10vh;
+    //width: 100%;
+    background-color: rgb(49, 49, 49);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1rem;
+    color: $colorBlanco;
 
+}
+.footer a{
+    color: $colorBlanco;
+    text-decoration: none;
+    letter-spacing: 15px;
+    font-size: 1.5rem;
+   // background-color: red;
+}
+
+
+//⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS IPAD⁡
+
+@media only screen and (min-width: 768px){
+
+    .navbar{
+        padding: 8px calc(3/4)*$margins !important; //por defecto agrega 8 top-bottom padding
+        //background-color: pink;
+    }
+    
+    .imgLogo{
+        height: 75px;
+    }
+    
+    .call h1{
+        font-size: 10vw;
+        //padding-bottom: 1rem;
+    }
+    
+    .call h2{
+        width: 70vw;
+        font-size: 3.5vw;
+        padding-bottom: 20px;
+    
+    }
+    
+    .call a{
+        transform: scale(1);
+    }
+
+
+    nav.navbarSticky{
+        display: none !important;
+    }
+    
+    // ⁡⁢⁣⁣START⁡ QUIENES SOMOS
+    
+    .logoGif{
+    //  background-color: blue;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    
+    
+    .quienesSomos p{
+        //background-color: red;
+        font-size: 2vw;
+        line-height: 2vw;
+    }
+
+    .footer{
+        font-size: 1.5rem;
+    
+    }
+    .footer a{
+        font-size: 2rem;
+    }
+
+}
+
+//⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS DESKTOP⁡
+
+@media only screen and (min-width: 1200px){
+.p-xl{
+    padding: 6rem;
+}
+
+
+.navbar{
+    margin: 0 6rem !important;
+    padding: 1.5rem 0 !important; //por defecto agrega 8 top-bottom padding, no afecta borde derecho
+
+    div{
+        
+
+        div div ul{
+
+
+            li{
+                text-align: center;
+                font-size: 1.8vw;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.imgLogo{
+    height: 60px;
+}
+
+header.homepage{
+    background-image: url(./img/Auto\ amariilo.png);
+    background-repeat: no-repeat;
+    background-size: 170% auto;
+    background-position: right 80% bottom 55%;
+}
+
+
+
+.call{
+    width: 45%;
+    height: auto;
+    padding: 0.5rem 0;
+    margin-left: 6rem;
+    align-items: start;
+    // background-color: red;
+}
+
+
+
+.call h1{
+    font-size: 5.5vw;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+
+.call h2{
+    width: 30vw;
+    font-size: 2vw;
+    text-align: left;
+
+}
+
+.call a{
+    transform: scale(1);
+}
+
+header i{
+    transform: scale(2);
+    }  
+
+
+.quienesSomos p{
+    //background-color: red;
+    max-width: 90%;
+
+}
+
+
+}
 
 //MEDIDAS FULL SCREEN
 // .footer{
@@ -334,23 +476,3 @@ div.resenas{
 
 
 
-.footer{
-    //height 30vh para footer con altura
-    height: 10vh;
-    //width: 100%;
-    background-color: rgb(49, 49, 49);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 1rem;
-    color: $colorBlanco;
-
-}
-.footer a{
-    color: $colorBlanco;
-    text-decoration: none;
-    letter-spacing: 15px;
-    font-size: 1.5rem;
-   // background-color: red;
-}

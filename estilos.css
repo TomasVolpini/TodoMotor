@@ -28,11 +28,31 @@ html {
 .offcanvas-body li {
   padding-right: 2%;
 }
+.offcanvas-body li:last-child {
+  padding-right: 0px;
+}
 .offcanvas-body a {
   color: black !important;
 }
 .offcanvas-body a:hover {
   color: blueviolet !important;
+}
+
+.navbar {
+  padding: 8px 1rem !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
+.navbar div {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.navbar div div div ul {
+  padding: 0 !important;
+}
+.navbar div div div ul li {
+  text-align: center;
 }
 
 header.homepage {
@@ -55,7 +75,7 @@ header.homepage {
   height: auto;
   padding: 2rem;
   border: none;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,14 +83,14 @@ header.homepage {
 
 .call h1 {
   font-size: 11vw;
-  font-weight: 900;
+  font-weight: 700;
 }
 
-.call p {
+.call h2 {
   width: 70vw;
   font-size: 4vw;
   text-align: center;
-  font-weight: 900;
+  font-weight: 700;
   padding-bottom: 24px;
 }
 
@@ -81,7 +101,7 @@ header.homepage {
   background-color: blueviolet;
   box-shadow: 3px 3px 5px 1px black;
   text-decoration: none;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   border-radius: 100px;
   transform: scale(0.7);
 }
@@ -111,7 +131,8 @@ header i {
 }
 
 .imgFachada {
-  border-radius: 30px !important;
+  border-radius: 4vw !important;
+  width: 100%;
 }
 
 .logoGif {
@@ -121,12 +142,117 @@ header i {
 }
 
 .quienesSomos p {
-  font-size: 1rem;
+  max-width: 500px;
+  font-size: 4vw;
   font-weight: bolder;
   text-align: justify;
-  line-height: 1rem;
+  line-height: 4vw;
 }
 
+.footer {
+  height: 10vh;
+  background-color: rgb(49, 49, 49);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1rem;
+  color: white;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 15px;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding: 8px 1.5rem !important;
+  }
+  .imgLogo {
+    height: 75px;
+  }
+  .call h1 {
+    font-size: 10vw;
+  }
+  .call h2 {
+    width: 70vw;
+    font-size: 3.5vw;
+    padding-bottom: 20px;
+  }
+  .call a {
+    transform: scale(1);
+  }
+  nav.navbarSticky {
+    display: none !important;
+  }
+  .logoGif {
+    width: auto;
+    height: auto;
+    display: block;
+  }
+  .quienesSomos p {
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+  .footer {
+    font-size: 1.5rem;
+  }
+  .footer a {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .p-xl {
+    padding: 6rem;
+  }
+  .navbar {
+    margin: 0 6rem !important;
+    padding: 1.5rem 0 !important;
+  }
+  .navbar div div div ul li {
+    text-align: center;
+    font-size: 1.8vw;
+    font-weight: 700;
+  }
+  .imgLogo {
+    height: 60px;
+  }
+  header.homepage {
+    background-image: url(./img/Auto\ amariilo.png);
+    background-repeat: no-repeat;
+    background-size: 170% auto;
+    background-position: right 80% bottom 55%;
+  }
+  .call {
+    width: 45%;
+    height: auto;
+    padding: 0.5rem 0;
+    margin-left: 6rem;
+    align-items: start;
+  }
+  .call h1 {
+    font-size: 5.5vw;
+    font-weight: 700;
+    padding-bottom: 1rem;
+  }
+  .call h2 {
+    width: 30vw;
+    font-size: 2vw;
+    text-align: left;
+  }
+  .call a {
+    transform: scale(1);
+  }
+  header i {
+    transform: scale(2);
+  }
+  .quienesSomos p {
+    max-width: 90%;
+  }
+}
 #repuestos {
   background-color: rgb(48, 48, 48);
   color: white;
@@ -184,22 +310,4 @@ div.resenas .cardResenas--s {
 div.resenas .cardResenas--l {
   width: 816px;
   display: none;
-}
-
-.footer {
-  height: 10vh;
-  background-color: rgb(49, 49, 49);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 1rem;
-  color: white;
-}
-
-.footer a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 15px;
-  font-size: 1.5rem;
 }/*# sourceMappingURL=estilos.css.map */
