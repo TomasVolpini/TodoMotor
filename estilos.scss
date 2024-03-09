@@ -219,7 +219,90 @@ header i{
 }
 
 
-//⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS IPAD⁡
+
+#repuestos{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 150px;
+}
+#compraOnline{
+    background-color: rgb(0, 47, 255);
+    padding: 150px;
+}
+#contactanos{
+    background-color: rgb(14, 14, 14);
+    color: white;
+    padding: 150px;
+}
+
+
+//​‌‌‌⁡⁣⁣⁢RESEÑAS⁡​
+
+
+div.resenas{
+    height: auto;
+    background-color: $colorAmarillo;
+    padding-top: 20px;
+
+    .cardResenas{
+        transform: scale(0.7); //CREA MARGENES INVISIBLES PORQUE NO ESCALA EL DIV
+        display: inline-block;
+        height: 347px;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        padding: 0 2.3rem 0;
+        box-shadow: 4px 4px 10px 0px transparentize($color: $colorVioleta, $amount: 0.5);
+
+        .posicion{
+            position: relative;
+            top: 2.3rem;
+            
+
+            div.estrellas{
+               // background-color: pink;
+                color: $colorAmarillo;
+                font-size: 1.8rem;
+                word-spacing: 0.5rem;
+                margin-bottom: 1rem;
+            }
+    
+            div.texto{
+                //width: 300px;
+                //background-color: pink;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: justify;
+                line-height: 1.5rem;
+            }
+        }
+
+
+    
+    }
+
+    .cardResenas--s{
+        width: 384px;
+        min-width: 384px;
+        //min-width: calc(384px - (408px - 360px));
+    }
+
+    .cardResenas--l{
+        width: 816px;
+        min-width: 816px;
+        display: none;
+
+    }
+
+}
+
+
+
+//⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS IPAD⁡
 
 @media only screen and (min-width: 768px){
 
@@ -277,6 +360,23 @@ header i{
         font-size: 2rem;
     }
 
+
+    // ⁡⁢⁣⁣START ⁡⁢⁣⁣RESEÑAS⁡
+
+    div.resenas{
+        padding: 30px;
+
+        .cardResenas{
+            transform: scale(0.8);
+        }
+    
+        .cardResenas--l{
+            width: 816px;
+            min-width: 816px;
+            display: inline-block;
+    
+        }
+    }
 }
 
 //⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS DESKTOP⁡
@@ -360,119 +460,25 @@ header i{
 }
 
 
-}
-
-//MEDIDAS FULL SCREEN
-// .footer{
-//     height: 300px;
-//     width: 100%;
-//     background-color: rgb(49, 49, 49);
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     padding: 32px 64px;
-//     align-items: flex-end;
-//     font-size: 28px;
-//     color: white;
-
-// }
-// .footer a{
-//     color: white;
-//     text-decoration: none;
-//     letter-spacing: 15px;
-// }
-
-// .footer p{
-//     display: inline-block;
-//     /* background-color: blueviolet; */
-// }
-
-
-
-
-
-
-#repuestos{
-    background-color: rgb(48, 48, 48);
-    color: white;
-    padding: 150px;
-}
-#compraOnline{
-    background-color: rgb(0, 47, 255);
-    padding: 150px;
-}
-#contactanos{
-    background-color: rgb(14, 14, 14);
-    color: white;
-    padding: 150px;
-}
-
-
-//​‌‌‌⁡⁣⁣⁢RESEÑAS⁡​
-
-
 div.resenas{
-    height: auto;
-    background-color: $colorAmarillo;
-    //width: 100%;
-    padding-top: 20px;
-    
+    height: 100vh;
+    padding: 6rem;
 
     .cardResenas{
-        transform: scale(0.7);
-        display: inline-block;
-        height: 347px;
-        background-color: white;
-        //width: 384px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        //justify-content: center;
-        align-items: center;
-        border-radius: 2rem;
-        padding: 0 2.3rem 0;
-        box-shadow: 4px 4px 10px 0px transparentize($color: $colorVioleta, $amount: 0.5);
-
-        .posicion{
-            position: relative;
-            top: 2.3rem;
-            
-
-            div.estrellas{
-               // background-color: pink;
-                color: $colorAmarillo;
-                font-size: 1.8rem;
-                word-spacing: 0.5rem;
-                margin-bottom: 1rem;
-            }
-    
-            div.texto{
-                //width: 300px;
-                //background-color: pink;
-                font-size: 1.5rem;
-                font-weight: bold;
-                text-align: justify;
-                line-height: 1.5rem;
-            }
-        }
-
-
+        transform: scale(1);
+        margin-right: 3rem;
     
     }
 
-    .cardResenas--s{
-        width: 384px;
-
+    .cardResenas:last-child{
+        margin: 0;
     }
 
     .cardResenas--l{
-        width: 816px;
-        display: none;
-
+        display: block;
     }
-
 }
 
-
+}
 
 
