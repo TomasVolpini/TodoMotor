@@ -10,14 +10,12 @@ $colorVioleta: #9747FF;
 $colorVioletaHover: #532095;
 $colorAmarillo: #FFCE00;
 $colorBlanco: white;
+$roboto: 'Roboto', sans-serif;
+$robotoCondensed: 'Roboto Condensed', sans-serif;
 
 $margins: 2rem;
 
 
-#compraOnline{
-    background-color: rgb(0, 47, 255);
-    padding: 150px;
-}
 #contactanos{
     background-color: rgb(14, 14, 14);
     color: white;
@@ -299,7 +297,7 @@ div.resenas{
 
 .espacio{
     height: 75px;
-    background-color: red;
+    //background-color: red;
     width: 100%;
     background-image: url(./img/Todo\ motor\ single\ pattern.svg);
     background-repeat: repeat;
@@ -365,6 +363,48 @@ div.entreOtros{
     }
 
 }
+
+//​‌‌‌⁡⁣⁣⁡⁣⁣⁡⁣⁣⁢​‌‌‌COMPRA ONLINE.​⁡
+
+.compraOnline{
+    height: 100vh;
+    width: 100%;
+    background-color: $colorAmarillo;
+    margin: $margins 0 $margins;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+
+    a{
+        color: $colorBlanco;
+        font-size: 38px;
+        text-decoration: none;
+        text-shadow: 2px 2px 4px transparentize($color: $colorVioleta, $amount: 0.5);
+    }
+
+    a:hover{
+        text-shadow:
+        -1px -1px 0 $colorNegro,  
+        1px -1px 0 $colorNegro,
+        -1px  1px 0 $colorNegro,
+        1px  1px 0 $colorNegro,
+        2px 2px 4px transparentize($color: $colorVioleta, $amount: 0.5);
+    }
+
+    a:active{
+        color: $colorVioletaHover;
+    }
+
+    p{
+        display: inline-block;
+    }
+
+    img{
+        scale: 0.3;
+        margin-top: -50px;
+    }
+}
+
 
 //⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS IPAD⁡
 
