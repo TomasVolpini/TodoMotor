@@ -538,7 +538,7 @@ footer{
         }
     
         a.botonEnviar{
-            background-color: violet;
+            background-color: violet ;
             grid-area: boton;
             display: inline-block;
             color: $colorBlanco;
@@ -561,11 +561,11 @@ footer{
 
 
 .row1{
-    background-color: red;
+    //background-color: red;
 }
 
 .row2{
-    background-color: blue;
+    //background-color: blue;
 }
 
 .contactanos{
@@ -576,7 +576,7 @@ footer{
     height: 1000px;
 
     .row{
-        background-color: magenta;
+        //background-color: magenta;
     }
 
     h1{
