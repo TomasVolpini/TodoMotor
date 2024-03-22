@@ -471,7 +471,7 @@ footer{
             //background-color: lavender;
             height: 200px;
             display: grid;
-            grid-template-columns: 24px auto;
+            grid-template-columns: 40px auto;
             grid-template-rows: repeat(4, 40px);
             gap: 10px;
             font-size: 28px;
@@ -492,7 +492,15 @@ footer{
     
             a{
                 color: $colorVioleta;
-                text-decoration: none;
+
+                .exclude{
+                    display: inline-block;
+                    color: initial;
+                }
+            }
+
+            a:hover{
+                color: $colorVioletaHover;
             }
     
         }
@@ -515,7 +523,8 @@ footer{
             
             input{
                 padding-left: 6px;
-                border: 2px solid;
+                border: 2px solid $colorGris;
+                border-radius: 4px;
             }
     
             input.nombre{
@@ -536,13 +545,14 @@ footer{
                 grid-area: mensaje;
                 min-height: 150px;
                 padding-left: 6px;
-                border: 2px solid;
+                border: 2px solid $colorGris;
+                border-radius: 4px;
             }
     
             input:focus, textarea:focus{
                 border: 2px solid $colorVioleta;   
                 outline: none;
-                border-radius: 2px;
+                border-radius: 4px;
             }
         }
     
@@ -555,12 +565,21 @@ footer{
             font-weight: bold;
             font-size: 25px;
             background-color: $colorVioleta;
-            box-shadow: 3px 3px 5px 1px $colorNegro;
+            box-shadow: 3px 3px 5px 1px darken($colorNegro, 10%);
             text-decoration: none;
             padding: 0.8rem 2rem;
             border-radius: 100px;
             margin: 24px auto;
         }
+
+        a.botonEnviar:hover{
+            background-color: $colorVioletaHover;
+        }
+
+        a.botonEnviar:active{
+            background-color: $colorAmarillo;
+        }
+
     }
 
 }
