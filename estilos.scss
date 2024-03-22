@@ -239,9 +239,14 @@ header i{
 
 
 div.resenas{
-    height: auto;
+    height: 100vh;
     background-color: $colorAmarillo;
     padding-top: 20px;
+
+    .deslizar2{
+        display: none !important;
+        //background-color: red;
+    }
 
     .cardResenas{
         transform: scale(0.7); //CREA MARGENES INVISIBLES PORQUE NO ESCALA EL DIV
@@ -298,6 +303,42 @@ div.resenas{
     }
 
 }
+
+// ANIMACIONES
+
+//mobile tablet
+
+.deslizar{
+    display: inline-block;
+    animation-name: deslizar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+}
+
+
+@keyframes deslizar{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    33%{
+        transform: translateX(-100px);
+    }
+
+    67%{
+        transform: translateX(25px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
 
 //​‌‌‌⁡⁣⁣​‌‌‌⁡⁣⁣⁢REPUESTOS⁡​​
 
@@ -650,14 +691,14 @@ footer{
         padding: 30px;
 
         .cardResenas{
-            transform: scale(0.8);
+            transform: scale(1);
+            margin-right: 3rem;
+        
         }
     
-        .cardResenas--l{
-            width: 816px;
-            min-width: 816px;
-            display: inline-block;
     
+        .cardResenas--l{
+            display: block;
         }
     }
 }
@@ -727,10 +768,6 @@ header.homepage{
 
 }
 
-// .call a{
-//     transform: scale(1);
-// }
-//innecesario, ya está en query tablet
 
 header i{
     transform: scale(2);
@@ -746,23 +783,52 @@ header i{
 
 div.resenas{
     height: 100vh;
-    padding: 6rem;
+    //padding: 6rem;
+    flex-wrap: nowrap;
+    overflow: hidden !important;
 
-    .cardResenas{
-        transform: scale(1);
-        margin-right: 3rem;
+    .deslizar{
+        animation-name: infinito;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 30s;
+        animation-delay: 0s;
+        //padding-right: 6rem;
+    }
     
-    }
-
-    .cardResenas:last-child{
-        margin: 0;
-    }
-
-    .cardResenas--l{
-        display: block;
+    .deslizar2{
+        display: inline-flex !important;
+        
     }
 }
 
+@keyframes deslizar{
+
+    0%{
+    }
+
+
+    100%{
+    }
+    
 }
 
+
+@keyframes infinito{
+
+    0%{
+        transform: translateX(0);
+    }
+
+
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+
+
+}
 

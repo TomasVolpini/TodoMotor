@@ -181,9 +181,12 @@ header i {
 }
 
 div.resenas {
-  height: auto;
+  height: 100vh;
   background-color: #FFCE00;
   padding-top: 20px;
+}
+div.resenas .deslizar2 {
+  display: none !important;
 }
 div.resenas .cardResenas {
   transform: scale(0.7);
@@ -224,6 +227,30 @@ div.resenas .cardResenas--l {
   display: none;
 }
 
+.deslizar {
+  display: inline-block;
+  animation-name: deslizar;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-direction: normal;
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100px);
+  }
+  67% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .espacio {
   height: 125px;
   width: 100%;
@@ -483,12 +510,11 @@ footer {
     padding: 30px;
   }
   div.resenas .cardResenas {
-    transform: scale(0.8);
+    transform: scale(1);
+    margin-right: 3rem;
   }
   div.resenas .cardResenas--l {
-    width: 816px;
-    min-width: 816px;
-    display: inline-block;
+    display: block;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -538,16 +564,26 @@ footer {
   }
   div.resenas {
     height: 100vh;
-    padding: 6rem;
+    flex-wrap: nowrap;
+    overflow: hidden !important;
   }
-  div.resenas .cardResenas {
-    transform: scale(1);
-    margin-right: 3rem;
+  div.resenas .deslizar {
+    animation-name: infinito;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-delay: 0s;
   }
-  div.resenas .cardResenas:last-child {
-    margin: 0;
+  div.resenas .deslizar2 {
+    display: inline-flex !important;
   }
-  div.resenas .cardResenas--l {
-    display: block;
+  @keyframes deslizar {}
+  @keyframes infinito {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }/*# sourceMappingURL=estilos.css.map */
