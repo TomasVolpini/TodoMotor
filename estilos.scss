@@ -13,14 +13,11 @@ $colorBlanco: white;
 $roboto: 'Roboto', sans-serif;
 $robotoCondensed: 'Roboto Condensed', sans-serif;
 
+// $marginsCelu:
+// $marginsTablet:
 $margins: 2rem;
 
 
-#contactanos{
-    background-color: rgb(14, 14, 14);
-    color: white;
-    padding: 150px;
-}
 
 html {
     font-size: 16px;
@@ -207,32 +204,6 @@ header i{
 // ⁡⁢⁣⁣FIN⁡ QUIENES SOMOS
 
 
-.footer{
-    height: auto;
-    background-color: rgb(49, 49, 49);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-end;
-
-}
-
-.copyright{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 1rem;
-    color: $colorBlanco;
-
-}
-.copyright a{
-    color: $colorBlanco;
-    text-decoration: none;
-    letter-spacing: 15px;
-    font-size: 1.5rem;
-   // background-color: red;
-}
 
 
 //​‌‌‌⁡⁣⁣⁢RESEÑAS⁡​
@@ -418,7 +389,7 @@ div.entreOtros{
     height: 100vh;
     width: 100%;
     background-color: $colorAmarillo;
-    margin: $margins 0 $margins;
+    margin: $margins 0;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -453,15 +424,15 @@ div.entreOtros{
     }
 }
 
-//​‌‌‌⁡⁣⁣⁢CONTACTANOS 2⁡​
+//​‌‌‌CONTACTANOS ​
 
 footer{
     height: auto;
     background-color: $colorGris;
-    padding: 0 6rem 0;
-    margin-top: 20%;
+    padding: 0 calc(1/2)*$margins;
+    margin-top: 288px;
     background-image: url(./img/Todo\ motor\ single\ pattern.svg);
-    background-size: 6.25vw;
+    background-size: 80px;
 }
 
 .contactanos2{
@@ -471,64 +442,48 @@ footer{
     font-weight: bold;
     height: auto;
     position: relative;
-    top: -375px;
-    
-
-    
+    top: -300px;
 
     h1{
-        font-size: 4vw;
+        font-size: 8vw;
         font-weight: 700;
     }
 
     .mapaContacto{
         display: grid;
-        grid-template-columns: 7fr 5fr;
-        grid-template-rows: 200px auto auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
-            "mapa grillaInfo"
-            "mapa formulario"
-            ".    boton";
-        margin-bottom: -275px;
+            "grillaInfo"
+            "mapa"
+            "formulario"
+            "boton";
+        margin-bottom: -250px;
+        font-size: 20px;
 
-        .mapa{
-            grid-area: mapa;
-            height: 100%;
-            //background-color: pink;
-            padding: 0;
-    
-            iframe{
-                //background-color: blue;
-                height: stretch;
-                width: stretch;
-                margin-right: $margins;
-                border-radius: 1vw;
-            }
-            
-        }
-    
+
+
         .grillaInfo{
             grid-area: grillaInfo;
             //background-color: lavender;
-            height: 200px;
             display: grid;
-            grid-template-columns: 40px auto;
-            grid-template-rows: repeat(4, 40px);
+            grid-template-columns: 20px auto;
+            grid-template-rows: repeat(4, 25px);
             gap: 10px;
-            font-size: 28px;
+            padding-bottom: 20px;
     
             i{
                 //background-color: cyan;
-                font-size: 30px;
-                width: 24px;
+                
+                width: 20px;
                 text-align: left;
-                line-height: 40px;
+                line-height: 25px;
                 font-weight: 900;
                 
             }
     
             .fa-envelope{
-                font-size: 24px;
+                font-size: 16px;
             }
     
             a{
@@ -545,21 +500,39 @@ footer{
             }
     
         }
+
+        .mapa{
+            grid-area: mapa;
+            height: 250px;
+            //background-color: pink;
+            padding: 0;
+            width: auto;
+            padding-bottom: 20px;
+    
+            iframe{
+                //background-color: blue;
+                height: stretch;
+                width: stretch;
+                //margin-right: $margins;
+                border-radius: 1vw;
+            }
+            
+        }
+    
+
     
     
         .formulario{
             grid-area: formulario;
-            //background-color: orange;
-            min-height: calc(100% - 200px);
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 45px 45px auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: 35px 35px 35px auto;
             grid-template-areas: 
-                "nombre email"
-                "asunto asunto"
-                "mensaje mensaje";
-            gap: 6px 6px;
-            font-size: 20px;
+                "nombre"
+                "email"
+                "asunto"
+                "mensaje";
+            gap: 10px;
             font-family: $roboto;
             
             input{
@@ -601,10 +574,8 @@ footer{
             grid-area: boton;
             width: 35%;
             text-align: center;
-            //display: inline-block;
             color: $colorBlanco;
             font-weight: bold;
-            font-size: 25px;
             background-color: $colorVioleta;
             box-shadow: 3px 3px 5px 1px darken($colorNegro, 10%);
             text-decoration: none;
@@ -625,6 +596,21 @@ footer{
 
 }
 
+.copyright{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1rem;
+    color: $colorBlanco;
+
+}
+.copyright a{
+    color: $colorBlanco;
+    text-decoration: none;
+    letter-spacing: 15px;
+    font-size: 1.5rem;
+}
 
 //⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS IPAD⁡
 
@@ -701,6 +687,87 @@ footer{
             display: block;
         }
     }
+
+
+
+    footer{
+        padding: 8px calc(3/4)*$margins;
+        margin-top: 375px;
+        background-size: 100px;
+    }
+
+    .contactanos2{
+        top: -375px;
+        
+        h1{
+            font-size: 6vw;
+        }
+
+        .mapaContacto{
+            grid-template-columns: 7fr 5fr;
+            grid-template-rows: 200px auto auto;
+            grid-template-areas:
+                "mapa grillaInfo"
+                "mapa formulario"
+                ".    boton";
+            margin-bottom: -275px;
+            font-size: 24px;
+
+            .mapa{
+                height: 100%;
+        
+                iframe{
+                    margin-right: $margins;
+                }
+                padding-bottom: 0px;
+            }
+        
+            .grillaInfo{
+                grid-template-columns: 40px auto;
+                grid-template-rows: repeat(4, 40px);
+                padding-bottom: 0px;
+
+                i{
+                    font-size: 30px;
+                    width: 24px;
+                    line-height: 40px;
+                    
+                }
+
+                .fa-envelope{
+                    font-size: 24px;
+                }    
+            }
+        
+        
+            .formulario{
+                min-height: calc(100% - 200px);
+                grid-template-columns: 1fr;
+                grid-template-rows: 45px 45px 45px auto;
+                grid-template-areas: 
+                    "nombre"
+                    "email"
+                    "asunto"
+                    "mensaje mensaje";
+                gap: 6px 6px;
+                
+                input{
+                    font-size: initial;
+                }
+        
+        
+                textarea{
+                    font-size: initial;
+                }
+            }
+        
+
+        }
+
+    }
+
+
+
 }
 
 //⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS DESKTOP⁡
@@ -829,6 +896,39 @@ div.resenas{
 
 
 
+footer{
+    padding: 0 6rem 0;
+    background-size: 120px;
+}
+
+.contactanos2{
+    h1{
+        font-size: 4vw;
+    }
+
+    .mapaContacto{
+
+    
+        .grillaInfo{
+            font-size: 28px;
+        }
+    
+    
+        .formulario{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 45px 45px auto;
+            grid-template-areas: 
+                "nombre email"
+                "asunto asunto"
+                "mensaje mensaje";
+        }
+    
+
+    }
 
 }
+
+}
+
+
 

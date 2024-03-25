@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Condensed', sans-serif; */
-#contactanos {
-  background-color: rgb(14, 14, 14);
-  color: white;
-  padding: 150px;
-}
-
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -155,31 +149,6 @@ header i {
   line-height: 4vw;
 }
 
-.footer {
-  height: auto;
-  background-color: rgb(49, 49, 49);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
-}
-
-.copyright {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 1rem;
-  color: white;
-}
-
-.copyright a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 15px;
-  font-size: 1.5rem;
-}
-
 div.resenas {
   height: 100vh;
   background-color: #FFCE00;
@@ -316,7 +285,7 @@ div.entreOtros a {
   height: 100vh;
   width: 100%;
   background-color: #FFCE00;
-  margin: 2rem 0 2rem;
+  margin: 2rem 0;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
@@ -344,10 +313,10 @@ div.entreOtros a {
 footer {
   height: auto;
   background-color: #3D3D3D;
-  padding: 0 6rem 0;
-  margin-top: 20%;
+  padding: 0 1rem;
+  margin-top: 288px;
   background-image: url(./img/Todo\ motor\ single\ pattern.svg);
-  background-size: 6.25vw;
+  background-size: 80px;
 }
 
 .contactanos2 {
@@ -355,52 +324,36 @@ footer {
   font-weight: bold;
   height: auto;
   position: relative;
-  top: -375px;
+  top: -300px;
 }
 .contactanos2 h1 {
-  font-size: 4vw;
+  font-size: 8vw;
   font-weight: 700;
 }
 .contactanos2 .mapaContacto {
   display: grid;
-  grid-template-columns: 7fr 5fr;
-  grid-template-rows: 200px auto auto;
-  grid-template-areas: "mapa grillaInfo" "mapa formulario" ".    boton";
-  margin-bottom: -275px;
-}
-.contactanos2 .mapaContacto .mapa {
-  grid-area: mapa;
-  height: 100%;
-  padding: 0;
-}
-.contactanos2 .mapaContacto .mapa iframe {
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: stretch;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
-  margin-right: 2rem;
-  border-radius: 1vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "grillaInfo" "mapa" "formulario" "boton";
+  margin-bottom: -250px;
+  font-size: 20px;
 }
 .contactanos2 .mapaContacto .grillaInfo {
   grid-area: grillaInfo;
-  height: 200px;
   display: grid;
-  grid-template-columns: 40px auto;
-  grid-template-rows: repeat(4, 40px);
+  grid-template-columns: 20px auto;
+  grid-template-rows: repeat(4, 25px);
   gap: 10px;
-  font-size: 28px;
+  padding-bottom: 20px;
 }
 .contactanos2 .mapaContacto .grillaInfo i {
-  font-size: 30px;
-  width: 24px;
+  width: 20px;
   text-align: left;
-  line-height: 40px;
+  line-height: 25px;
   font-weight: 900;
 }
 .contactanos2 .mapaContacto .grillaInfo .fa-envelope {
-  font-size: 24px;
+  font-size: 16px;
 }
 .contactanos2 .mapaContacto .grillaInfo a {
   color: #9747FF;
@@ -412,15 +365,29 @@ footer {
 .contactanos2 .mapaContacto .grillaInfo a:hover {
   color: #532095;
 }
+.contactanos2 .mapaContacto .mapa {
+  grid-area: mapa;
+  height: 250px;
+  padding: 0;
+  width: auto;
+  padding-bottom: 20px;
+}
+.contactanos2 .mapaContacto .mapa iframe {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  border-radius: 1vw;
+}
 .contactanos2 .mapaContacto .formulario {
   grid-area: formulario;
-  min-height: calc(100% - 200px);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 45px 45px auto;
-  grid-template-areas: "nombre email" "asunto asunto" "mensaje mensaje";
-  gap: 6px 6px;
-  font-size: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 35px 35px auto;
+  grid-template-areas: "nombre" "email" "asunto" "mensaje";
+  gap: 10px;
   font-family: "Roboto", sans-serif;
 }
 .contactanos2 .mapaContacto .formulario input {
@@ -455,7 +422,6 @@ footer {
   text-align: center;
   color: white;
   font-weight: bold;
-  font-size: 25px;
   background-color: #9747FF;
   box-shadow: 3px 3px 5px 1px #1e1e1e;
   text-decoration: none;
@@ -468,6 +434,22 @@ footer {
 }
 .contactanos2 .mapaContacto a.botonEnviar:active {
   background-color: #FFCE00;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1rem;
+  color: white;
+}
+
+.copyright a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 15px;
+  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -515,6 +497,57 @@ footer {
   }
   div.resenas .cardResenas--l {
     display: block;
+  }
+  footer {
+    padding: 8px 1.5rem;
+    margin-top: 375px;
+    background-size: 100px;
+  }
+  .contactanos2 {
+    top: -375px;
+  }
+  .contactanos2 h1 {
+    font-size: 6vw;
+  }
+  .contactanos2 .mapaContacto {
+    grid-template-columns: 7fr 5fr;
+    grid-template-rows: 200px auto auto;
+    grid-template-areas: "mapa grillaInfo" "mapa formulario" ".    boton";
+    margin-bottom: -275px;
+    font-size: 24px;
+  }
+  .contactanos2 .mapaContacto .mapa {
+    height: 100%;
+    padding-bottom: 0px;
+  }
+  .contactanos2 .mapaContacto .mapa iframe {
+    margin-right: 2rem;
+  }
+  .contactanos2 .mapaContacto .grillaInfo {
+    grid-template-columns: 40px auto;
+    grid-template-rows: repeat(4, 40px);
+    padding-bottom: 0px;
+  }
+  .contactanos2 .mapaContacto .grillaInfo i {
+    font-size: 30px;
+    width: 24px;
+    line-height: 40px;
+  }
+  .contactanos2 .mapaContacto .grillaInfo .fa-envelope {
+    font-size: 24px;
+  }
+  .contactanos2 .mapaContacto .formulario {
+    min-height: calc(100% - 200px);
+    grid-template-columns: 1fr;
+    grid-template-rows: 45px 45px 45px auto;
+    grid-template-areas: "nombre" "email" "asunto" "mensaje mensaje";
+    gap: 6px 6px;
+  }
+  .contactanos2 .mapaContacto .formulario input {
+    font-size: initial;
+  }
+  .contactanos2 .mapaContacto .formulario textarea {
+    font-size: initial;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -585,5 +618,20 @@ footer {
     100% {
       transform: translateX(-100%);
     }
+  }
+  footer {
+    padding: 0 6rem 0;
+    background-size: 120px;
+  }
+  .contactanos2 h1 {
+    font-size: 4vw;
+  }
+  .contactanos2 .mapaContacto .grillaInfo {
+    font-size: 28px;
+  }
+  .contactanos2 .mapaContacto .formulario {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45px 45px auto;
+    grid-template-areas: "nombre email" "asunto asunto" "mensaje mensaje";
   }
 }/*# sourceMappingURL=estilos.css.map */
