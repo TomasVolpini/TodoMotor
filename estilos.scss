@@ -13,11 +13,79 @@ $colorBlanco: white;
 $roboto: 'Roboto', sans-serif;
 $robotoCondensed: 'Roboto Condensed', sans-serif;
 
-// $marginsCelu:
-// $marginsTablet:
+$marginsCelu: 2rem;
+$marginsTablet: 4rem;
+$marginsDesktop: 6rem;
+
 $margins: 2rem;
 
+$botonCelu: 4vw;
+$anchoMinCelu: 38.79vw;
 
+$botonTablet: 2.5vw;
+$anchoMinTablet: 17.93vw;
+
+$botonDesktop: 1.3vw;
+$anchoMinDesktop: 11.85vw;
+
+// ::-webkit-scrollbar{
+//     background-color: $colorNegro;
+//     width: 8px;
+//     //outline: solid 1.5px $colorNegro;
+
+// }
+
+// ::-webkit-scrollbar-thumb{
+//     background-color: $colorAmarillo;
+//     //border: solid 1.5px $colorGris;
+//     border-radius: 100px;
+// }
+
+@mixin margenes($margen){
+
+    .pX{
+        padding: 0 $margen !important;
+    }
+
+    .pTop{
+        padding-top: $margen !important;
+    }
+
+    .pBot{
+        padding-bottom: $margen !important;
+    }
+
+    .mBot{
+        margin-bottom: $margen !important;
+    }
+
+}
+
+@mixin boton($size, $min){
+    .boton{
+        display: inline-block;
+        text-align: center;
+        min-width: $min ;
+        color: $colorBlanco;
+        font-weight: bold;
+        font-size: $size;
+        line-height: $size;
+        background-color: $colorVioleta;
+        box-shadow: 3px 3px 5px 1px $colorNegro;
+        text-decoration: none;
+        padding:1rem 2rem;
+        border-radius: 100px;
+    }
+
+    .boton:hover{
+        background-color: $colorVioletaHover;
+        color: $colorBlanco;
+    }
+    
+    .boton:active{
+        background-color: $colorAmarillo;
+    }
+}
 
 html {
     font-size: 16px;
@@ -61,20 +129,31 @@ html {
     }
 }
 
+.container-fluid, .row{
+    margin: 0 !important;
+    padding: 0 !important;
+
+    div{
+        padding: 0;
+    }
+
+}
 
 
-//Previamente full estaba aca
 
 
 
 
 // ⁡⁢⁣⁣START⁡ HERO SECTION
 
+@include margenes($marginsCelu);
+@include boton($botonCelu, $anchoMinCelu);
+
 .navbar{
-    padding: 8px calc(1/2)*$margins !important; //por defecto agrega 8 top-bottom padding, no afecta borde derecho
-    margin: 0 !important;
     display: flex !important;
     justify-content: space-evenly !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
     //background-color: pink;
 
     div{
@@ -99,7 +178,7 @@ header.homepage{
     background-repeat: no-repeat;
     background-size: 700%;
     background-position: right 58% bottom 50%;
-    position:relative
+    position: relative;
 }
 
 .imgLogo{
@@ -111,9 +190,7 @@ header.homepage{
 .call{
     width: 100%;
     height: auto;
-    padding: 2rem;
     border: none;
-    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,26 +214,6 @@ header.homepage{
 
 }
 
-.call a{
-    color: $colorBlanco;
-    font-weight: bold;
-    font-size: 25px;
-    background-color: $colorVioleta;
-    box-shadow: 3px 3px 5px 1px $colorNegro;
-    text-decoration: none;
-    padding:0.8rem 2rem;
-    border-radius: 100px;
-    transform: scale(0.7);
-}
-
-.call a:hover{
-    background-color: $colorVioletaHover;
-}
-
-.call a:active{
-    background-color: $colorAmarillo;
-}
-
 header i{
     position: absolute;
     left: 50%;
@@ -171,14 +228,20 @@ header i{
 
 .navbarSticky{
     background-color: $colorBlanco;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     position: sticky;
     top: 0px;
     border-bottom:  2px  solid $colorAmarillo;
     z-index: 2
 }
 
-// ⁡⁢⁣⁣START⁡ QUIENES SOMOS
+// ⁡⁢⁣⁣START⁡ ⁡⁣⁣⁢​‌‌‌QUIENES SOMOS​⁡
+
+.quienesSomos{
+    height: auto;
+}
+
 .imgFachada{
     border-radius: 4vw !important;
     width: 100%;
@@ -200,6 +263,7 @@ header i{
     font-weight: bolder;
     text-align: justify;
     line-height: 4vw;
+    margin-bottom: 0;
 }
 //28px para full screen
 // ⁡⁢⁣⁣FIN⁡ QUIENES SOMOS
@@ -211,9 +275,9 @@ header i{
 
 
 div.resenas{
-    height: 100vh;
+    height: auto;
     background-color: $colorAmarillo;
-    padding-top: 20px;
+    padding-left: 0 !important;
 
     .deslizar2{
         display: none !important;
@@ -370,39 +434,21 @@ div.entreOtros{
         .titulo{
             font-size: 30px;
             text-transform: uppercase;
-            padding-top: 24px;
         }
     
         .escribinos{
             font-size: 15px;
         }
     
-        div.boton{
-            margin-bottom: 24px;
-    
-            a{
+
+        div{
+            margin: auto 0 !important;
+            .boton{
                 display: inline-block;
-                transform: scale(0.7);
-                width: auto;
-                color: $colorBlanco;
-                font-weight: bold;
-                font-size: 25px;
-                background-color: $colorVioleta;
                 box-shadow: 3px 3px 5px 1px darken($colorNegro, 10%);
-                text-decoration: none;
-                padding: 0.8rem 2rem !important;
-                border-radius: 100px;
-            }
-    
-            
-            a:hover{
-                background-color: $colorVioletaHover;
-            }
-    
-            a:active{
-                background-color: $colorAmarillo;
             }
         }
+
 
     }
     
@@ -413,7 +459,8 @@ div.entreOtros{
 //​‌‌‌⁡⁣⁣⁡⁣⁣⁡⁣⁣⁢​‌‌‌COMPRA ONLINE​⁡
 
 .compraOnline{
-    height: 100vh;
+    height: auto;
+    padding: 6rem 0;
     width: 100%;
     background-color: $colorAmarillo;
     text-align: center;
@@ -606,26 +653,10 @@ footer{
             }
         }
     
-        a.botonEnviar{
+        a.boton{
             grid-area: boton;
-            width: 35%;
-            text-align: center;
-            color: $colorBlanco;
-            font-weight: bold;
-            background-color: $colorVioleta;
             box-shadow: 3px 3px 5px 1px darken($colorNegro, 10%);
-            text-decoration: none;
-            padding: 0.8rem 2rem;
-            border-radius: 100px;
             margin: 24px auto;
-        }
-
-        a.botonEnviar:hover{
-            background-color: $colorVioletaHover;
-        }
-
-        a.botonEnviar:active{
-            background-color: $colorAmarillo;
         }
 
     }
@@ -651,14 +682,16 @@ footer{
 //⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS IPAD⁡
 
 @media only screen and (min-width: 768px){
+    @include margenes($marginsTablet);
+    @include boton($botonTablet, $anchoMinTablet);
 
     .navbar{
-        padding: 8px calc(3/4)*$margins !important; //por defecto agrega 8 top-bottom padding
-        //background-color: pink;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
     }
     
     .imgLogo{
-        height: 75px;
+        height: 40px;
     }
     
     .call h1{
@@ -673,22 +706,23 @@ footer{
     
     }
     
-    .call a{
-        transform: scale(1);
-    }
 
-
-    nav.navbarSticky{
-        display: none !important;
-    }
     
     // ⁡⁢⁣⁣START⁡ QUIENES SOMOS
+
     
     .logoGif{
     //  background-color: blue;
-        width: auto;
+        width: 52vw;
         height: auto;
-        display: block;
+        display: inline-block;
+    }
+
+    .quienesSomos{
+        div{
+            padding: 0 !important;
+
+        }
     }
     
     
@@ -710,17 +744,17 @@ footer{
     // ⁡⁢⁣⁣START ⁡⁢⁣⁣RESEÑAS⁡
 
     div.resenas{
-        padding: 30px;
+        padding-left: $marginsTablet !important;
 
         .cardResenas{
             transform: scale(1);
-            margin-right: 3rem;
+            margin-right: $marginsTablet;
         
         }
     
     
         .cardResenas--l{
-            display: block;
+            display: inline-block;
         }
     }
 
@@ -761,7 +795,6 @@ footer{
 
 
     footer{
-        padding: 8px calc(3/4)*$margins;
         margin-top: 375px;
         background-size: 100px;
     }
@@ -828,14 +861,12 @@ footer{
 //⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS DESKTOP⁡
 
 @media only screen and (min-width: 1200px){
-.p-xl{
-    padding: 6rem;
-}
-
+    @include margenes($marginsDesktop);
+    @include boton($botonDesktop, $anchoMinDesktop);
 
 .navbar{
-    margin: 0 6rem !important;
-    padding: 1.5rem 0 !important; //por defecto agrega 8 top-bottom padding, no afecta borde derecho
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
 
     div{
         
@@ -852,8 +883,9 @@ footer{
     }
 }
 
+
 .imgLogo{
-    height: 60px;
+    height: 3vw;
 }
 
 header.homepage{
@@ -895,16 +927,26 @@ header i{
     }  
 
 
+nav.navbarSticky{
+    display: none !important;
+}
+
+.quienesSomos{
+    padding: 6rem !important;
+}
+
 .quienesSomos p{
     //background-color: red;
     max-width: 90%;
 
 }
 
+.logoGif{
+        width: 30vw;
+    }
 
 div.resenas{
-    height: 100vh;
-    //padding: 6rem;
+    padding: 6rem;
     flex-wrap: nowrap;
     overflow: hidden !important;
 
@@ -1024,7 +1066,7 @@ div.resenas{
     }
 
     footer{
-        padding: 0 6rem 0;
+        //padding: 0 6rem 0;
         background-size: 120px;
     }
 

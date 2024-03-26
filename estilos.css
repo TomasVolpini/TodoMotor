@@ -38,11 +38,59 @@ html {
   color: #9747FF !important;
 }
 
-.navbar {
-  padding: 8px 1rem !important;
+.container-fluid, .row {
   margin: 0 !important;
+  padding: 0 !important;
+}
+.container-fluid div, .row div {
+  padding: 0;
+}
+
+.pX {
+  padding: 0 2rem !important;
+}
+
+.pTop {
+  padding-top: 2rem !important;
+}
+
+.pBot {
+  padding-bottom: 2rem !important;
+}
+
+.mBot {
+  margin-bottom: 2rem !important;
+}
+
+.boton {
+  display: inline-block;
+  text-align: center;
+  min-width: 38.79vw;
+  color: white;
+  font-weight: bold;
+  font-size: 4vw;
+  line-height: 4vw;
+  background-color: #9747FF;
+  box-shadow: 3px 3px 5px 1px #373737;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+}
+
+.boton:hover {
+  background-color: #532095;
+  color: white;
+}
+
+.boton:active {
+  background-color: #FFCE00;
+}
+
+.navbar {
   display: flex !important;
   justify-content: space-evenly !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .navbar div {
   padding: 0 !important;
@@ -73,9 +121,7 @@ header.homepage {
 .call {
   width: 100%;
   height: auto;
-  padding: 2rem;
   border: none;
-  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,26 +140,6 @@ header.homepage {
   padding-bottom: 24px;
 }
 
-.call a {
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-  background-color: #9747FF;
-  box-shadow: 3px 3px 5px 1px #373737;
-  text-decoration: none;
-  padding: 0.8rem 2rem;
-  border-radius: 100px;
-  transform: scale(0.7);
-}
-
-.call a:hover {
-  background-color: #532095;
-}
-
-.call a:active {
-  background-color: #FFCE00;
-}
-
 header i {
   position: absolute;
   left: 50%;
@@ -124,11 +150,16 @@ header i {
 
 .navbarSticky {
   background-color: white;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: sticky;
   top: 0px;
   border-bottom: 2px solid #FFCE00;
   z-index: 2;
+}
+
+.quienesSomos {
+  height: auto;
 }
 
 .imgFachada {
@@ -148,12 +179,13 @@ header i {
   font-weight: bolder;
   text-align: justify;
   line-height: 4vw;
+  margin-bottom: 0;
 }
 
 div.resenas {
-  height: 100vh;
+  height: auto;
   background-color: #FFCE00;
-  padding-top: 20px;
+  padding-left: 0 !important;
 }
 div.resenas .deslizar2 {
   display: none !important;
@@ -271,36 +303,21 @@ div.entreOtros .row {
 div.entreOtros .row .titulo {
   font-size: 30px;
   text-transform: uppercase;
-  padding-top: 24px;
 }
 div.entreOtros .row .escribinos {
   font-size: 15px;
 }
-div.entreOtros .row div.boton {
-  margin-bottom: 24px;
+div.entreOtros .row div {
+  margin: auto 0 !important;
 }
-div.entreOtros .row div.boton a {
+div.entreOtros .row div .boton {
   display: inline-block;
-  transform: scale(0.7);
-  width: auto;
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-  background-color: #9747FF;
   box-shadow: 3px 3px 5px 1px #1e1e1e;
-  text-decoration: none;
-  padding: 0.8rem 2rem !important;
-  border-radius: 100px;
-}
-div.entreOtros .row div.boton a:hover {
-  background-color: #532095;
-}
-div.entreOtros .row div.boton a:active {
-  background-color: #FFCE00;
 }
 
 .compraOnline {
-  height: 100vh;
+  height: auto;
+  padding: 6rem 0;
   width: 100%;
   background-color: #FFCE00;
   text-align: center;
@@ -441,24 +458,10 @@ footer {
   outline: none;
   border-radius: 4px;
 }
-.contactanos2 .mapaContacto a.botonEnviar {
+.contactanos2 .mapaContacto a.boton {
   grid-area: boton;
-  width: 35%;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  background-color: #9747FF;
   box-shadow: 3px 3px 5px 1px #1e1e1e;
-  text-decoration: none;
-  padding: 0.8rem 2rem;
-  border-radius: 100px;
   margin: 24px auto;
-}
-.contactanos2 .mapaContacto a.botonEnviar:hover {
-  background-color: #532095;
-}
-.contactanos2 .mapaContacto a.botonEnviar:active {
-  background-color: #FFCE00;
 }
 
 .copyright {
@@ -478,11 +481,45 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .pX {
+    padding: 0 4rem !important;
+  }
+  .pTop {
+    padding-top: 4rem !important;
+  }
+  .pBot {
+    padding-bottom: 4rem !important;
+  }
+  .mBot {
+    margin-bottom: 4rem !important;
+  }
+  .boton {
+    display: inline-block;
+    text-align: center;
+    min-width: 17.93vw;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    background-color: #9747FF;
+    box-shadow: 3px 3px 5px 1px #373737;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+  }
+  .boton:hover {
+    background-color: #532095;
+    color: white;
+  }
+  .boton:active {
+    background-color: #FFCE00;
+  }
   .navbar {
-    padding: 8px 1.5rem !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
   }
   .imgLogo {
-    height: 75px;
+    height: 40px;
   }
   .call h1 {
     font-size: 10vw;
@@ -492,16 +529,13 @@ footer {
     font-size: 3.5vw;
     padding-bottom: 20px;
   }
-  .call a {
-    transform: scale(1);
-  }
-  nav.navbarSticky {
-    display: none !important;
-  }
   .logoGif {
-    width: auto;
+    width: 52vw;
     height: auto;
-    display: block;
+    display: inline-block;
+  }
+  .quienesSomos div {
+    padding: 0 !important;
   }
   .quienesSomos p {
     font-size: 2vw;
@@ -514,14 +548,14 @@ footer {
     font-size: 2rem;
   }
   div.resenas {
-    padding: 30px;
+    padding-left: 4rem !important;
   }
   div.resenas .cardResenas {
     transform: scale(1);
-    margin-right: 3rem;
+    margin-right: 4rem;
   }
   div.resenas .cardResenas--l {
-    display: block;
+    display: inline-block;
   }
   .repuestos, .espacio {
     background-size: 100px;
@@ -543,7 +577,6 @@ footer {
     margin: auto !important;
   }
   footer {
-    padding: 8px 1.5rem;
     margin-top: 375px;
     background-size: 100px;
   }
@@ -589,12 +622,42 @@ footer {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .p-xl {
-    padding: 6rem;
+  .pX {
+    padding: 0 6rem !important;
+  }
+  .pTop {
+    padding-top: 6rem !important;
+  }
+  .pBot {
+    padding-bottom: 6rem !important;
+  }
+  .mBot {
+    margin-bottom: 6rem !important;
+  }
+  .boton {
+    display: inline-block;
+    text-align: center;
+    min-width: 11.85vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+    background-color: #9747FF;
+    box-shadow: 3px 3px 5px 1px #373737;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+  }
+  .boton:hover {
+    background-color: #532095;
+    color: white;
+  }
+  .boton:active {
+    background-color: #FFCE00;
   }
   .navbar {
-    margin: 0 6rem !important;
-    padding: 1.5rem 0 !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
   }
   .navbar div div div ul li {
     text-align: center;
@@ -602,7 +665,7 @@ footer {
     font-weight: 700;
   }
   .imgLogo {
-    height: 60px;
+    height: 3vw;
   }
   header.homepage {
     background-repeat: no-repeat;
@@ -629,11 +692,20 @@ footer {
   header i {
     transform: scale(2);
   }
+  nav.navbarSticky {
+    display: none !important;
+  }
+  .quienesSomos {
+    padding: 6rem !important;
+  }
   .quienesSomos p {
     max-width: 90%;
   }
+  .logoGif {
+    width: 30vw;
+  }
   div.resenas {
-    height: 100vh;
+    padding: 6rem;
     flex-wrap: nowrap;
     overflow: hidden !important;
   }
@@ -707,7 +779,6 @@ footer {
     transform: scale(1) !important;
   }
   footer {
-    padding: 0 6rem 0;
     background-size: 120px;
   }
   .contactanos2 h1 {
