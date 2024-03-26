@@ -410,7 +410,7 @@ div.entreOtros{
 
 }
 
-//​‌‌‌⁡⁣⁣⁡⁣⁣⁡⁣⁣⁢​‌‌‌COMPRA ONLINE.​⁡
+//​‌‌‌⁡⁣⁣⁡⁣⁣⁡⁣⁣⁢​‌‌‌COMPRA ONLINE​⁡
 
 .compraOnline{
     height: 100vh;
@@ -419,6 +419,10 @@ div.entreOtros{
     text-align: center;
     font-weight: bold;
     font-size: 18px;
+
+    .hidden{
+        display: none;
+    }
 
     a{
         color: $colorBlanco;
@@ -440,14 +444,18 @@ div.entreOtros{
         color: $colorVioletaHover;
     }
 
-    p{
+    div.tocame{
         display: inline-block;
     }
 
-    img{
-        scale: 0.3;
-        margin-top: -50px;
+    div.logo{
+        display: inline-block;
+        img{
+            height: 38px;
+            width: 100px;
+        }
     }
+
 }
 
 //​‌‌‌CONTACTANOS ​
@@ -724,6 +732,31 @@ footer{
         background-size: 100px;
     }
 
+//​‌‌‌⁡⁣⁣⁢ONLINE⁡​
+
+    .compraOnline{
+        font-size: 24px;
+    
+        .hidden{
+            display: inline-block;
+        }
+    
+        a{
+            font-size: 64px;
+        }
+        
+
+        div.logo{
+            display: inline-block;
+            img{
+                height: 64px;
+                margin: auto !important;
+            }
+        }
+
+    }
+
+    
 //⁡⁣⁣⁢​‌‌‌CONTACTO​⁡
 
 

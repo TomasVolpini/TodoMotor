@@ -307,6 +307,9 @@ div.entreOtros .row div.boton a:active {
   font-weight: bold;
   font-size: 18px;
 }
+.compraOnline .hidden {
+  display: none;
+}
 .compraOnline a {
   color: white;
   font-size: 38px;
@@ -319,12 +322,15 @@ div.entreOtros .row div.boton a:active {
 .compraOnline a:active {
   color: #532095;
 }
-.compraOnline p {
+.compraOnline div.tocame {
   display: inline-block;
 }
-.compraOnline img {
-  scale: 0.3;
-  margin-top: -50px;
+.compraOnline div.logo {
+  display: inline-block;
+}
+.compraOnline div.logo img {
+  height: 38px;
+  width: 100px;
 }
 
 footer {
@@ -519,6 +525,22 @@ footer {
   }
   .repuestos, .espacio {
     background-size: 100px;
+  }
+  .compraOnline {
+    font-size: 24px;
+  }
+  .compraOnline .hidden {
+    display: inline-block;
+  }
+  .compraOnline a {
+    font-size: 64px;
+  }
+  .compraOnline div.logo {
+    display: inline-block;
+  }
+  .compraOnline div.logo img {
+    height: 64px;
+    margin: auto !important;
   }
   footer {
     padding: 8px 1.5rem;
