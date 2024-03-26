@@ -58,7 +58,7 @@ html {
 header.homepage {
   height: 100svh;
   width: 100%;
-  background-image: url(./img/Auto\ amariilo.png);
+  background-image: url(./img/Auto\ amariilo.webp);
   background-repeat: no-repeat;
   background-size: 700%;
   background-position: right 58% bottom 50%;
@@ -605,7 +605,6 @@ footer {
     height: 60px;
   }
   header.homepage {
-    background-image: url(./img/Auto\ amariilo.png);
     background-repeat: no-repeat;
     background-size: 170% auto;
     background-position: right 80% bottom 55%;
