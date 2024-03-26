@@ -128,6 +128,7 @@ header i {
   position: sticky;
   top: 0px;
   border-bottom: 2px solid #FFCE00;
+  z-index: 2;
 }
 
 .imgFachada {
@@ -220,12 +221,16 @@ div.resenas .cardResenas--l {
     transform: translateX(0);
   }
 }
-.espacio {
-  height: 125px;
+.repuestos, .espacio {
+  background-size: 80px;
   width: 100%;
+  background-position: center;
+}
+
+.espacio {
+  height: 80px;
   background-image: url(./img/Todo\ motor\ single\ pattern.svg);
   background-repeat: repeat;
-  background-size: 6.25vw;
 }
 
 .esp1 {
@@ -238,12 +243,14 @@ div.resenas .cardResenas--l {
 
 .repuestos {
   height: auto;
-  width: 100%;
   background-image: url(./img/Todo\ motor\ single\ pattern.svg), linear-gradient(#373737, #3D3D3D);
-  background-size: 6.25vw;
 }
-.repuestos li {
+.repuestos ul {
+  padding: 0 !important;
+}
+.repuestos ul li {
   color: white;
+  width: auto;
   font-size: 30px;
   font-weight: bolder;
   text-align: center;
@@ -258,34 +265,44 @@ div.entreOtros {
   text-align: center;
   font-weight: bolder;
 }
-div.entreOtros .titulo {
+div.entreOtros .row {
+  gap: 10px;
+}
+div.entreOtros .row .titulo {
   font-size: 30px;
   text-transform: uppercase;
   padding-top: 24px;
 }
-div.entreOtros .escribinos {
+div.entreOtros .row .escribinos {
   font-size: 15px;
 }
-div.entreOtros a {
-  margin: 0 auto;
+div.entreOtros .row div.boton {
+  margin-bottom: 24px;
+}
+div.entreOtros .row div.boton a {
+  display: inline-block;
+  transform: scale(0.7);
   width: auto;
   color: white;
   font-weight: bold;
   font-size: 25px;
   background-color: #9747FF;
-  box-shadow: 3px 3px 5px 1px #373737;
+  box-shadow: 3px 3px 5px 1px #1e1e1e;
   text-decoration: none;
   padding: 0.8rem 2rem !important;
   border-radius: 100px;
-  transform: scale(0.7);
-  margin-bottom: 24px;
+}
+div.entreOtros .row div.boton a:hover {
+  background-color: #532095;
+}
+div.entreOtros .row div.boton a:active {
+  background-color: #FFCE00;
 }
 
 .compraOnline {
   height: 100vh;
   width: 100%;
   background-color: #FFCE00;
-  margin: 2rem 0;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
@@ -314,7 +331,7 @@ footer {
   height: auto;
   background-color: #3D3D3D;
   padding: 0 1rem;
-  margin-top: 288px;
+  margin-top: 300px;
   background-image: url(./img/Todo\ motor\ single\ pattern.svg);
   background-size: 80px;
 }
@@ -394,6 +411,7 @@ footer {
   padding-left: 6px;
   border: 2px solid #3D3D3D;
   border-radius: 4px;
+  font-size: initial;
 }
 .contactanos2 .mapaContacto .formulario input.nombre {
   grid-area: nombre;
@@ -410,6 +428,7 @@ footer {
   padding-left: 6px;
   border: 2px solid #3D3D3D;
   border-radius: 4px;
+  font-size: initial;
 }
 .contactanos2 .mapaContacto .formulario input:focus, .contactanos2 .mapaContacto .formulario textarea:focus {
   border: 2px solid #9747FF;
@@ -498,6 +517,9 @@ footer {
   div.resenas .cardResenas--l {
     display: block;
   }
+  .repuestos, .espacio {
+    background-size: 100px;
+  }
   footer {
     padding: 8px 1.5rem;
     margin-top: 375px;
@@ -542,12 +564,6 @@ footer {
     grid-template-rows: 45px 45px 45px auto;
     grid-template-areas: "nombre" "email" "asunto" "mensaje mensaje";
     gap: 6px 6px;
-  }
-  .contactanos2 .mapaContacto .formulario input {
-    font-size: initial;
-  }
-  .contactanos2 .mapaContacto .formulario textarea {
-    font-size: initial;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -618,6 +634,56 @@ footer {
     100% {
       transform: translateX(-100%);
     }
+  }
+  .repuestos, .espacio {
+    background-size: 120px;
+  }
+  .espacio {
+    height: 120px;
+  }
+  .repuestos ul li {
+    font-size: 60px;
+    text-decoration: none;
+    text-align: start;
+    line-height: 70px;
+  }
+  .repuestos .desfase {
+    margin-left: 100px;
+  }
+  .entreOtros {
+    padding: 40px 0 !important;
+  }
+  .entreOtros .row {
+    padding: 0 !important;
+    margin: 0 6rem !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 80px !important;
+  }
+  .entreOtros .row div {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    display: inline-block !important;
+  }
+  .entreOtros .row div.titulo {
+    font-size: 60px !important;
+    text-align: end;
+  }
+  .entreOtros .row div.escribinos {
+    font-size: 28px !important;
+    text-align: start;
+    width: 300px !important;
+  }
+  .entreOtros .row div.boton {
+    margin: auto 0 !important;
+    padding: 0 !important;
+    text-align: start;
+  }
+  .entreOtros .row div.boton a {
+    margin: auto !important;
+    margin-right: 0;
+    transform: scale(1) !important;
   }
   footer {
     padding: 0 6rem 0;
