@@ -540,27 +540,27 @@ footer{
             "formulario"
             "boton";
         margin-bottom: -250px;
-        font-size: 20px;
-
-
 
         .grillaInfo{
             grid-area: grillaInfo;
             //background-color: lavender;
             display: grid;
             grid-template-columns: 20px auto;
-            grid-template-rows: repeat(4, 25px);
+            grid-template-rows: repeat(4, 30px);
             gap: 10px;
+            font-size: clamp(16px, 4.85vw, 20px);
             padding-bottom: 20px;
     
             i{
                 //background-color: cyan;
-                
+                margin: auto 0;
                 width: 20px;
                 text-align: left;
-                line-height: 25px;
                 font-weight: 900;
-                
+            }
+
+            p, a{
+                margin: auto 0;
             }
     
             .fa-envelope{
@@ -583,6 +583,7 @@ footer{
         }
 
         .mapa{
+            min-width: 20px;
             grid-area: mapa;
             height: 250px;
             //background-color: pink;
@@ -621,6 +622,9 @@ footer{
                 border: 2px solid $colorGris;
                 border-radius: 4px;
                 font-size: initial;
+                min-width: 20px !important;
+
+
             }
     
             input.nombre{
@@ -808,13 +812,13 @@ footer{
 
         .mapaContacto{
             grid-template-columns: 7fr 5fr;
-            grid-template-rows: 200px auto auto;
+            grid-template-rows: 16vw auto auto;
             grid-template-areas:
                 "mapa grillaInfo"
                 "mapa formulario"
                 ".    boton";
             margin-bottom: -275px;
-            font-size: 24px;
+            
 
             .mapa{
                 height: 100%;
@@ -826,27 +830,29 @@ footer{
             }
         
             .grillaInfo{
-                grid-template-columns: 40px auto;
-                grid-template-rows: repeat(4, 40px);
-                padding-bottom: 0px;
+                grid-template-columns: 2vw auto;
+                grid-template-rows: repeat(4, 3vw);    
+                font-size: clamp(18px, 2vw, 24px);            
+                
 
                 i{
-                    font-size: 30px;
+                    font-size: clamp(20px, 2.5vw, 30px);
                     width: 24px;
-                    line-height: 40px;
+                    line-height: 3vh;
                     
                 }
 
                 .fa-envelope{
-                    font-size: 24px;
+                    font-size: clamp(18px, 2vw, 24px);
                 }    
             }
         
         
             .formulario{
-                min-height: calc(100% - 200px);
+                padding-top: 10px;
+                min-height: calc(100% - 3vw);
                 grid-template-columns: 1fr;
-                grid-template-rows: 45px 45px 45px auto;
+                grid-template-rows: 40px 40px 40px auto;
                 grid-template-areas: 
                     "nombre"
                     "email"
@@ -1076,14 +1082,17 @@ div.resenas{
         }
 
         .mapaContacto{
+            grid-template-rows: 200px auto auto;
 
         
             .grillaInfo{
-                font-size: 28px;
+                grid-template-rows: repeat(4, 40px);
+                font-size: clamp(26px, 1.5vw, 28px);
             }
         
         
             .formulario{
+                padding-top: 0px;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 45px 45px auto;
                 grid-template-areas: 
