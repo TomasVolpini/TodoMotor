@@ -21,8 +21,31 @@ html {
   background-color: #FFCE00 !important;
 }
 
+.navbar-toggler {
+  border: transparent;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  display: inline-block;
+  height: auto;
+}
+.navbar-toggler-icon i {
+  color: #373737;
+  font-size: 20px;
+}
+
+.offcanvas {
+  width: clamp(250px, 39vw, 399px) !important;
+}
+
 .offcanvas-body {
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 3.7vw, 1.5rem);
   font-weight: 900;
 }
 .offcanvas-body li {
@@ -86,21 +109,11 @@ html {
   background-color: #FFCE00;
 }
 
-.navbar {
-  display: flex !important;
-  justify-content: space-evenly !important;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 .navbar div {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-.navbar div div div ul {
-  padding: 0 !important;
+  padding: 10px;
 }
 .navbar div div div ul li {
-  text-align: center;
+  text-align: right;
 }
 
 header.homepage {
@@ -140,7 +153,7 @@ header.homepage {
   padding-bottom: 24px;
 }
 
-header i {
+header i.flechaAbajo {
   position: absolute;
   left: 50%;
   top: 95%;
@@ -519,6 +532,9 @@ footer {
   .boton:active {
     background-color: #FFCE00;
   }
+  .navbar-toggler-icon i {
+    font-size: 24px;
+  }
   .navbar {
     padding-top: 30px !important;
     padding-bottom: 30px !important;
@@ -626,6 +642,12 @@ footer {
     gap: 6px 6px;
   }
 }
+@media only screen and (max-height: 1100px) and (min-width: 600px) {
+  header.homepage {
+    background-size: 400%;
+    background-position: right 58% bottom 60%;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .pX {
     padding: 0 6rem !important;
@@ -661,6 +683,22 @@ footer {
     background-color: #FFCE00;
   }
   .navbar {
+    display: flex !important;
+    justify-content: space-evenly !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .navbar div {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .navbar div div div ul {
+    padding: 0 !important;
+  }
+  .navbar div div div ul li {
+    text-align: center;
+  }
+  .navbar {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
   }
@@ -673,7 +711,6 @@ footer {
     height: 3vw;
   }
   header.homepage {
-    background-repeat: no-repeat;
     background-size: 170% auto;
     background-position: right 80% bottom 55%;
   }

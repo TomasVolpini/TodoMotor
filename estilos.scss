@@ -29,8 +29,9 @@ $botonDesktop: 1.3vw;
 $anchoMinDesktop: 11.85vw;
 
 // ::-webkit-scrollbar{
-//     background-color: $colorNegro;
-//     width: 8px;
+//     position: absolute;
+//     //background-color: rgba($color: #000000, $alpha: 0) ;
+//     width: 15px;
 //     //outline: solid 1.5px $colorNegro;
 
 // }
@@ -40,6 +41,9 @@ $anchoMinDesktop: 11.85vw;
 //     //border: solid 1.5px $colorGris;
 //     border-radius: 100px;
 // }
+
+
+
 
 @mixin margenes($margen){
 
@@ -106,8 +110,29 @@ html {
 .text-bg-dark{
     background-color: $colorAmarillo !important;
 }
+.navbar-toggler{
+    border: transparent;
+    padding: 0;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar-toggler-icon{
+    background-image: none;
+    display: inline-block;
+    height: auto;
+
+    i{
+        color: $colorNegro;
+        font-size: 20px;
+    }
+}
+.offcanvas{
+    width: clamp(250px, 39vw, 399px) !important;
+}
+
 .offcanvas-body{
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3.7vw, 1.5rem);
     font-weight: 900;
     //width: fill;
 
@@ -150,22 +175,16 @@ html {
 @include boton($botonCelu, $anchoMinCelu);
 
 .navbar{
-    display: flex !important;
-    justify-content: space-evenly !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    //background-color: pink;
-
+    
     div{
-        //background-color: blue;
-        padding: 0 !important;
-        margin: 0 !important;
+        padding: 10px;
 
         div div ul{
-            padding: 0 !important;
+
 
             li{
-                text-align: center;
+                text-align: right;
+                //font-size: clamp(250px, 39vw, 399px) ;
             }
         }
     }
@@ -214,7 +233,7 @@ header.homepage{
 
 }
 
-header i{
+header i.flechaAbajo{
     position: absolute;
     left: 50%;
     top: 95%;
@@ -689,6 +708,10 @@ footer{
     @include margenes($marginsTablet);
     @include boton($botonTablet, $anchoMinTablet);
 
+    .navbar-toggler-icon i{
+            font-size: 24px;
+    }
+
     .navbar{
         padding-top: 30px !important;
         padding-bottom: 30px !important;
@@ -698,6 +721,8 @@ footer{
         height: 40px;
     }
     
+
+
     .call h1{
         font-size: 10vw;
         //padding-bottom: 1rem;
@@ -864,11 +889,42 @@ footer{
     }
 }
 
+@media only screen and (max-height: 1100px) and (min-width: 600px){
+    header.homepage{
+        background-size: 400%;
+        background-position: right 58% bottom 60%;
+    }
+}
+
 //⁡⁢⁢⁡⁢⁢⁡⁢⁢⁣BREAKPOINTS DESKTOP⁡
 
 @media only screen and (min-width: 1200px){
     @include margenes($marginsDesktop);
     @include boton($botonDesktop, $anchoMinDesktop);
+
+
+
+    .navbar{
+        display: flex !important;
+        justify-content: space-evenly !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        //background-color: pink;
+    
+        div{
+            //background-color: blue;
+            padding: 0 !important;
+            margin: 0 !important;
+    
+            div div ul{
+                padding: 0 !important;
+    
+                li{
+                    text-align: center;
+                }
+            }
+        }
+    }
 
 .navbar{
     padding-top: 1.5rem !important;
@@ -895,7 +951,6 @@ footer{
 }
 
 header.homepage{
-    background-repeat: no-repeat;
     background-size: 170% auto;
     background-position: right 80% bottom 55%;
 }
