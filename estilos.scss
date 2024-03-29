@@ -247,8 +247,8 @@ header i.flechaAbajo{
 
 .navbarSticky{
     background-color: $colorBlanco;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
     position: sticky;
     top: 0px;
     border-bottom:  2px  solid $colorAmarillo;
