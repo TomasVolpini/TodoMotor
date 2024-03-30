@@ -17,7 +17,6 @@ $marginsCelu: 2rem;
 $marginsTablet: 4rem;
 $marginsDesktop: 6rem;
 
-$margins: 2rem;
 
 $botonCelu: 4vw;
 $anchoMinCelu: 38.79vw;
@@ -290,6 +289,26 @@ header i.flechaAbajo{
 
 
 
+.marcas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colorNegro;
+
+
+    img{
+        height: clamp(2px, 2vw, 45px);
+        filter:invert(100%);
+    }
+
+    img.persan{
+        width: clamp(20px, 8vw, 180px);
+        height: auto;
+    }
+
+    margin-bottom: $marginsCelu;
+}
+
 //​‌‌‌⁡⁣⁣⁢RESEÑAS⁡​
 
 
@@ -529,7 +548,6 @@ div.entreOtros{
 footer{
     height: auto;
     background-color: $colorGris;
-    padding: 0 calc(1/2)*$margins;
     margin-top: 300px;
     background-image: url(./img/Todo\ motor\ single\ pattern.svg);
     background-size: 80px;
@@ -770,6 +788,10 @@ footer{
     }
 
 
+    .marcas{
+        margin-bottom: $marginsTablet;
+    }
+
     // ⁡⁢⁣⁣START ⁡⁢⁣⁣RESEÑAS⁡
 
     div.resenas{
@@ -849,7 +871,7 @@ footer{
                 height: 100%;
         
                 iframe{
-                    margin-right: $margins;
+                    margin-right: 2rem;
                 }
                 padding-bottom: 0px;
             }
@@ -905,151 +927,135 @@ footer{
 
 
     .navbar{
-        display: flex !important;
         justify-content: space-evenly !important;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        //background-color: pink;
-    
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+
         div{
-            //background-color: blue;
             padding: 0 !important;
             margin: 0 !important;
-    
+
             div div ul{
                 padding: 0 !important;
-    
+
                 li{
                     text-align: center;
+                    font-size: 1.8vw;
+                    font-weight: 700;
                 }
             }
         }
     }
 
-.navbar{
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
 
-    div{
+    .imgLogo{
+        height: 3vw;
+    }
+
+    header.homepage{
+        background-size: 170% auto;
+        background-position: right 80% bottom 55%;
+    }
+
+
+
+    .call{
+        width: 45%;
+        height: auto;
+        padding: 0.5rem 0;
+        margin-left: 6rem;
+        align-items: start;
+        // background-color: red;
+    }
+
+
+
+    .call h1{
+        font-size: 5.5vw;
+        font-weight: 700;
+        padding-bottom: 1rem;
+    }
+
+
+    .call h2{
+        width: 30vw;
+        font-size: 2vw;
+        text-align: left;
+
+    }
+
+
+    header i{
+        transform: scale(2);
+        }  
+
+
+    nav.navbarSticky{
+        display: none !important;
+    }
+
+    .quienesSomos{
+        padding: 6rem !important;
+    }
+
+    .quienesSomos p{
+        //background-color: red;
+        max-width: 90%;
+
+    }
+
+    .logoGif{
+            width: 30vw;
+        }
+
+    .marcas{
+        margin-bottom: $marginsDesktop;
+    }
+
+    div.resenas{
+        padding: 6rem;
+        flex-wrap: nowrap;
+        overflow: hidden !important;
+
+        .deslizar{
+            animation-name: infinito;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-duration: 30s;
+            animation-delay: 0s;
+            //padding-right: 6rem;
+        }
         
-
-        div div ul{
-
-
-            li{
-                text-align: center;
-                font-size: 1.8vw;
-                font-weight: 700;
-            }
+        .deslizar2{
+            display: inline-flex !important;
+            
         }
     }
-}
+
+    @keyframes deslizar{
+
+        0%{
+        }
 
 
-.imgLogo{
-    height: 3vw;
-}
-
-header.homepage{
-    background-size: 170% auto;
-    background-position: right 80% bottom 55%;
-}
-
-
-
-.call{
-    width: 45%;
-    height: auto;
-    padding: 0.5rem 0;
-    margin-left: 6rem;
-    align-items: start;
-    // background-color: red;
-}
-
-
-
-.call h1{
-    font-size: 5.5vw;
-    font-weight: 700;
-    padding-bottom: 1rem;
-}
-
-
-.call h2{
-    width: 30vw;
-    font-size: 2vw;
-    text-align: left;
-
-}
-
-
-header i{
-    transform: scale(2);
-    }  
-
-
-nav.navbarSticky{
-    display: none !important;
-}
-
-.quienesSomos{
-    padding: 6rem !important;
-}
-
-.quienesSomos p{
-    //background-color: red;
-    max-width: 90%;
-
-}
-
-.logoGif{
-        width: 30vw;
-    }
-
-div.resenas{
-    padding: 6rem;
-    flex-wrap: nowrap;
-    overflow: hidden !important;
-
-    .deslizar{
-        animation-name: infinito;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-duration: 30s;
-        animation-delay: 0s;
-        //padding-right: 6rem;
-    }
-    
-    .deslizar2{
-        display: inline-flex !important;
+        100%{
+        }
         
     }
-}
-
-@keyframes deslizar{
-
-    0%{
-    }
 
 
-    100%{
-    }
-    
-}
+    @keyframes infinito{
+
+        0%{
+            transform: translateX(0);
+        }
 
 
-@keyframes infinito{
-
-    0%{
-        transform: translateX(0);
-    }
-
-
-    100%{
-        transform: translateX(-100%);
-    }
-    
-    }
+        100%{
+            transform: translateX(-100%);
+        }
+        
+        }
 
 //​‌‌‌⁡⁣⁣​‌‌‌⁡⁣⁣⁢REPUESTOS⁡​​
 

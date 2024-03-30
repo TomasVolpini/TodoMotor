@@ -195,6 +195,22 @@ header i.flechaAbajo {
   margin-bottom: 0;
 }
 
+.marcas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373737;
+  margin-bottom: 2rem;
+}
+.marcas img {
+  height: clamp(2px, 2vw, 45px);
+  filter: invert(100%);
+}
+.marcas img.persan {
+  width: clamp(20px, 8vw, 180px);
+  height: auto;
+}
+
 div.resenas {
   height: auto;
   background-color: #FFCE00;
@@ -366,7 +382,6 @@ div.entreOtros .row div .boton {
 footer {
   height: auto;
   background-color: #3D3D3D;
-  padding: 0 1rem;
   margin-top: 300px;
   background-image: url(./img/Todo\ motor\ single\ pattern.svg);
   background-size: 80px;
@@ -568,6 +583,9 @@ footer {
   .copyright a {
     font-size: 2rem;
   }
+  .marcas {
+    margin-bottom: 4rem;
+  }
   div.resenas {
     padding-left: 4rem !important;
   }
@@ -683,10 +701,9 @@ footer {
     background-color: #FFCE00;
   }
   .navbar {
-    display: flex !important;
     justify-content: space-evenly !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
   }
   .navbar div {
     padding: 0 !important;
@@ -694,13 +711,6 @@ footer {
   }
   .navbar div div div ul {
     padding: 0 !important;
-  }
-  .navbar div div div ul li {
-    text-align: center;
-  }
-  .navbar {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
   }
   .navbar div div div ul li {
     text-align: center;
@@ -745,6 +755,9 @@ footer {
   }
   .logoGif {
     width: 30vw;
+  }
+  .marcas {
+    margin-bottom: 6rem;
   }
   div.resenas {
     padding: 6rem;
